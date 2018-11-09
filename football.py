@@ -35,11 +35,8 @@ def arrange_teams(p):
     return team1, team2, team1Count, team2Count
 
 players = [player("Greg", 15, 17, 12, 14, 12), player("Steve", 12, 12, 11, 11, 14), player("Mark", 11, 12, 12, 12, 12), player("Craig", 17, 12, 9, 11, 15), player("Bill", 17, 17, 18, 14, 18), player("John", 12, 13, 16, 12,16)]
-array=[]
 
-for i in range(0,len(players)):
-    tmp=str(players[i].name) + ":" + str(players[i].get_stats())
-    array.append(tmp)
+array = [player.name + ":" + str(player.get_stats()) for player in players]
 
 team1Skill=0
 team2Skill=31
