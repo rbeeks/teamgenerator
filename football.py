@@ -4,20 +4,17 @@ import os
 class player:
     def __init__(self, name, shooting, passing, defending, goalkeeping, fitness):
         self.name = name
-        self.shooting = shooting
-        self.passing = passing
-        self.defending = defending
-        self.goalkeeping = goalkeeping
-        self.fitness = fitness
 
-def totalStats(person):
-    total=0
-    for attr, value in person.__dict__.iteritems():
-            if str(value).isdigit():
-                total=total+int(value)
-            #print attr, value
-    #print total
-    return person.name, total
+        self.stats = {
+            "shooting": shooting,
+            "passing": passing,
+            "defending": defending,
+            "goalkeeping": goalkeeping,
+            "fitness": fitness
+        }
+
+    def get_stats(self):
+        return sum(self.stats.values())
 
 def arrange_teams(p):
     team1=[]
@@ -41,7 +38,7 @@ players = [player("Greg", 15, 17, 12, 14, 12), player("Steve", 12, 12, 11, 11, 1
 array=[]
 
 for i in range(0,len(players)):
-    tmp=str(totalStats(players[i])[0]) + ":" + str(totalStats(players[i])[1])
+    tmp=str(players[i].name) + ":" + str(players[i].get_stats())
     array.append(tmp)
 
 team1Skill=0
