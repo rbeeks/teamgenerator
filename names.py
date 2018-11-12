@@ -8,7 +8,10 @@ def generate_team_name():
         "Magnificent",
         "Marvellous",
         "Crazy",
-        "Established"
+        "Established",
+        "Burbling",
+        "Confident",
+        "Zimbabwean"
     ]
 
     nouns = [
@@ -18,7 +21,10 @@ def generate_team_name():
         "Pelicans",
         "CuntSmashers",
         "FixEngines",
-        "Tigers"
+        "Tigers",
+        "Bananas",
+        "Capybaras",
+        "Rowans"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
