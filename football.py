@@ -1,6 +1,6 @@
 import random
 import os
-import sys
+import csv
 
 class player:
     def __init__(self, name, shooting, passing, defending, goalkeeping, fitness):
@@ -35,17 +35,13 @@ def arrange_teams(p):
             p.pop(rand)
     return team1, team2, team1Count, team2Count
 
-players = []
-with open('players.csv', 'r') as f:
-    playerfile=f.readlines()
-    for i in range(0,len(playerfile)):
-        fStats=playerfile[i].rstrip().split(',')
-        if (len(fStats)!=6):
-            print('Incorrectly formatted csv')
-            sys.exit()
-        players.append(player(fStats[0],int(fStats[1]),int(fStats[2]),int(fStats[3]),int(fStats[4]),int(fStats[5])))
-    
+   
+def read_players(filename = 'players.csv'):
+    with open(filename, 'r') as f:
+        csv_file = csv.reader(f)
+        return [player(line[0],int(line[1]),int(line[2]),int(line[3]),int(line[4]),int(line[5])) for line in csv_file if len(line) == 6]
 
+players = read_players()
 array = [player.name + ":" + str(player.get_stats()) for player in players]
 
 team1Skill=0
