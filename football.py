@@ -1,5 +1,6 @@
 import random
 import os
+import sys
 
 class player:
     def __init__(self, name, shooting, passing, defending, goalkeeping, fitness):
@@ -34,7 +35,16 @@ def arrange_teams(p):
             p.pop(rand)
     return team1, team2, team1Count, team2Count
 
-players = [player("Greg", 15, 17, 12, 14, 12), player("Steve", 12, 12, 11, 11, 14), player("Mark", 11, 12, 12, 12, 12), player("Craig", 17, 12, 9, 11, 15), player("Bill", 17, 17, 18, 14, 18), player("John", 12, 13, 16, 12,16)]
+players = []
+with open('players.csv', 'r') as f:
+    playerfile=f.readlines()
+    for i in range(0,len(playerfile)):
+        fStats=playerfile[i].rstrip().split(',')
+        if (len(fStats)!=6):
+            print('Incorrectly formatted csv')
+            sys.exit()
+        players.append(player(fStats[0],int(fStats[1]),int(fStats[2]),int(fStats[3]),int(fStats[4]),int(fStats[5])))
+    
 
 array = [player.name + ":" + str(player.get_stats()) for player in players]
 
