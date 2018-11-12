@@ -3,6 +3,7 @@ import os
 import sys
 import csv
 from random import shuffle
+import names
 
 class Player:
     def __init__(self, name, shooting, passing, defending, goalkeeping, fitness):
@@ -22,16 +23,20 @@ class Player:
 class Team:
     def __init__(self):
         self.players = []
+        self.name = names.generate_team_name()
     
     def __repr__(self):
-        return '\n'.join(["Team Name (" + str(self.get_skill()) + ")"] + ["- " + player.name for player in self.players] + [""])
+        return '\n'.join([self.name + " (" + str(self.get_skill()) + ")"] + ["- " + player.name for player in self.players] + [""])
 
     def get_skill(self):
         return sum([p.get_stats() for p in self.players])
 
 def arrange_teams(players):
-    team1=Team()
-    team2=Team()
+    team1 = Team()
+    team2 = Team()
+    while team1.name == team2.name:
+        team2 = Team()
+        
     shuffle(players)
 
     for player in players:
