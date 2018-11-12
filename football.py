@@ -1,5 +1,6 @@
 import random
 import os
+import sys
 import csv
 
 class player:
@@ -39,7 +40,12 @@ def arrange_teams(p):
 def read_players(filename = 'players.csv'):
     with open(filename, 'r') as f:
         csv_file = csv.reader(f)
-        return [player(line[0],int(line[1]),int(line[2]),int(line[3]),int(line[4]),int(line[5])) for line in csv_file if len(line) == 6]
+        try:           
+            return [player(line[0],int(line[1]),int(line[2]),int(line[3]),int(line[4]),int(line[5])) for line in csv_file if not line[0].startswith("#")]
+        except:
+            print("Incorrectly formatted csv")
+            sys.exit()
+
 
 players = read_players()
 array = [player.name + ":" + str(player.get_stats()) for player in players]
