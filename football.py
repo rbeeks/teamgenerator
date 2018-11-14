@@ -37,15 +37,26 @@ def arrange_teams(players):
     while team1.name == team2.name:
         team2 = Team()
         
-    shuffle(players)
+    
 
-    for player in players:
-        if team2.get_skill() > team1.get_skill():
-            team1.players.append(player)
-        else:
-            team2.players.append(player)
-
-    return team1, team2
+    # Try to get the teams as even as possible
+    for max_skill_gap in xrange(1,1000,5):
+        for i in xrange(2000):
+            # Assign teams
+            shuffle(players)
+            for player in players:
+                if team2.get_skill() > team1.get_skill():
+                    team1.players.append(player)
+                else:
+                    team2.players.append(player)
+            # If they're within tolerance, return
+            if (abs(team1.get_skill() - team2.get_skill()) < max_skill_gap):
+                return team1, team2
+            else:
+                # Clear teams and try again
+                del team1.players[:]
+                del team2.players[:]   
+    sys.exit()
 
    
 def read_players(filename = 'players.csv'):
@@ -60,9 +71,9 @@ def read_players(filename = 'players.csv'):
 
 players = read_players()
 
-while True:
-    [team1, team2] = arrange_teams(players)
-    if (abs(team1.get_skill() - team2.get_skill()) < 30): break
+[team1, team2] = arrange_teams(players)
 
+print "HOME TEAM"
 print team1
+print "AWAY TEAM (BIBS)"
 print team2
