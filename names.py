@@ -11,7 +11,19 @@ def generate_team_name():
         "Established",
         "Burbling",
         "Confident",
-        "Zimbabwean"
+        "Zimbabwean",
+        "Ingolrious",
+        "Ravishing",
+        "Indubious",
+        "Dubious",
+        "Realistic",
+        "Unrealistic",
+        "Loquacious",
+        "Luminous",
+        "Sclerotic",
+        "Withering",
+        "Feckless",
+        "Boorish"
     ]
 
     nouns = [
@@ -24,7 +36,17 @@ def generate_team_name():
         "Tigers",
         "Bananas",
         "Capybaras",
-        "Rowans"
+        "Rowans",
+        "FartBlasters",
+        "PicklePickers",
+        "PeckerHandlers",
+        "Rats",
+        "Hullaballoos",
+        "Wippersnappers",
+        "Poppycocks",
+        "Otters",
+        "FartSplitters",
+        "PoopCollectors"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
