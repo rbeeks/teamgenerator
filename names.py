@@ -23,7 +23,22 @@ def generate_team_name():
         "Sclerotic",
         "Withering",
         "Feckless",
-        "Boorish"
+        "Boorish",
+        "Pointless",
+        "Hilarious",
+        "Dystopian",
+        "Angelic",
+        "Telegraphic",
+        "Fat",
+        "KFC loving",
+        "Swashbuckling",
+        "Xenophilic",
+        "Football playing",
+        "Romantic",
+        "Convex",
+        "Mineral rich",
+        "0 indexed",
+        "Magisterial"
     ]
 
     nouns = [
@@ -46,7 +61,21 @@ def generate_team_name():
         "Poppycocks",
         "Otters",
         "FartSplitters",
-        "PoopCollectors"
+        "PoopCollectors",
+        "Donkeys",
+        "Smurfs",
+        "Mushrooms",
+        "Bullets",
+        "Clowns",
+        "Aliens",
+        "Plebs",
+        "Pythons",
+        "Bums",
+        "Magicians",
+        "Infants",
+        "In-laws",
+        "Convicts",
+        "Antarcticans"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)

@@ -2,5 +2,5 @@
 randomiser for generating teams
 
 INPUT: 
-Players.csv
+players.csv
 #Name,Shooting,Passing,Defending,Goalkeeping,Fitness

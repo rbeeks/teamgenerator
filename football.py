@@ -1,5 +1,4 @@
-import random
-import os
+#!/usr/bin/python
 import sys
 import csv
 from random import shuffle
