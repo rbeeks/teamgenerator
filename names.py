@@ -38,7 +38,12 @@ def generate_team_name():
         "Convex",
         "Mineral rich",
         "0 indexed",
-        "Magisterial"
+        "Magisterial",
+        "Hysterical",
+        "Pickled",
+        "Gaping",
+        "Cyborg",
+        "Toasted"
     ]
 
     nouns = [
@@ -75,7 +80,12 @@ def generate_team_name():
         "Infants",
         "In-laws",
         "Convicts",
-        "Antarcticans"
+        "Antarcticans",
+        "Mormons",
+        "Antelopes",
+        "Beekmeyers",
+        "Plumbers",
+        "Pirates"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
