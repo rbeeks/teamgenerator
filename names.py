@@ -23,7 +23,12 @@ def generate_team_name():
         "Sclerotic",
         "Withering",
         "Feckless",
-        "Boorish"
+        "Boorish",
+        "Hysterical",
+        "Pickled",
+        "Gaping",
+        "Cyborg",
+        "Toasted"
     ]
 
     nouns = [
@@ -46,7 +51,12 @@ def generate_team_name():
         "Poppycocks",
         "Otters",
         "FartSplitters",
-        "PoopCollectors"
+        "PoopCollectors",
+        "Mormons",
+        "Antelopes",
+        "Beekmeyers",
+        "Plumbers",
+        "Pirates
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
