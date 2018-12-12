@@ -85,7 +85,8 @@ def generate_team_name():
         "Antelopes",
         "Beekmeyers",
         "Plumbers",
-        "Pirates"
+        "Pirates",
+        "Wizards"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
