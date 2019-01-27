@@ -3,6 +3,7 @@ import sys
 import csv
 from random import shuffle
 import names
+import makePicture
 
 class Player:
     def __init__(self, name, shooting, passing, defending, goalkeeping, fitness):
@@ -16,8 +17,11 @@ class Player:
             "fitness": fitness
         }
 
-    def get_stats(self):
+    def get_stats_sum(self):
         return sum(self.stats.values())
+
+    def get_stats(self):
+        return self.stats.values()
 
 class Team:
     def __init__(self):
@@ -25,10 +29,17 @@ class Team:
         self.name = names.generate_team_name()
     
     def __repr__(self):
-        return '\n'.join([self.name + " (" + str(self.get_skill()) + ")"] + ["- " + player.name for player in self.players] + [""])
+        return '\n'.join([self.name + " (" + str(self.get_skill_sum()) + ")"] + ["- " + player.name for player in self.players] + [""])
 
-    def get_skill(self):
-        return sum([p.get_stats() for p in self.players])
+    def get_skill_avg(self):
+        skill_total = []
+        all_player_skills = [p.get_stats() for p in self.players]
+        for i in range(0,5):
+            skill_total.append(sum([x[i] for x in all_player_skills]))
+        return [float(x)/float(len(self.players)) for x in skill_total]
+
+    def get_skill_sum(self):
+        return sum([p.get_stats_sum() for p in self.players])
 
 def arrange_teams(players):
     team1 = Team()
@@ -44,12 +55,12 @@ def arrange_teams(players):
             # Assign teams
             shuffle(players)
             for player in players:
-                if team2.get_skill() > team1.get_skill():
+                if team2.get_skill_sum() > team1.get_skill_sum():
                     team1.players.append(player)
                 else:
                     team2.players.append(player)
             # If they're within tolerance, return
-            if (abs(team1.get_skill() - team2.get_skill()) < max_skill_gap):
+            if (abs(team1.get_skill_sum() - team2.get_skill_sum()) < max_skill_gap):
                 return team1, team2
             else:
                 # Clear teams and try again
@@ -76,3 +87,5 @@ print "HOME TEAM"
 print team1
 print "AWAY TEAM (BIBS)"
 print team2
+makePicture.makePicture(team1, team2, 'Teams.png')
+
