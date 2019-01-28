@@ -43,7 +43,11 @@ def generate_team_name():
         "Pickled",
         "Gaping",
         "Cyborg",
-        "Toasted"
+        "Toasted",
+        "Hydrophobic",
+        "Heartless",
+        "Blue-Eyes White",
+        "Red-Eyes Black"
     ]
 
     nouns = [
@@ -86,7 +90,10 @@ def generate_team_name():
         "Beekmeyers",
         "Plumbers",
         "Pirates",
-        "Wizards"
+        "Wizards",
+        "Cheese Sandwiches",
+        "Nobodies",
+        "Dragons"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
