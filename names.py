@@ -30,7 +30,6 @@ def generate_team_name():
         "Angelic",
         "Telegraphic",
         "Fat",
-        "Sky-Blue Pink",
         "KFC Loving",
         "Swashbuckling",
         "Xenophilic",
@@ -69,7 +68,7 @@ def generate_team_name():
         "PeckerHandlers",
         "Rats",
         "Hullaballoos",
-        "Wippersnappers",
+        "Whippersnappers",
         "Poppycocks",
         "Otters",
         "FartSplitters",
@@ -96,7 +95,6 @@ def generate_team_name():
         "Wizards",
         "Cheese Sandwiches",
         "Nobodies",
-        "Selmas",
         "Alcoholics",
         "Dragons"
     ]
