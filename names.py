@@ -30,6 +30,7 @@ def generate_team_name():
         "Angelic",
         "Telegraphic",
         "Fat",
+        "Sky-Blue Pink",
         "KFC Loving",
         "Swashbuckling",
         "Xenophilic",
@@ -46,6 +47,8 @@ def generate_team_name():
         "Toasted",
         "Hydrophobic",
         "Heartless",
+        "Alcoholic",
+        "Hungover",
         "Blue-Eyes White",
         "Red-Eyes Black"
     ]
@@ -93,6 +96,8 @@ def generate_team_name():
         "Wizards",
         "Cheese Sandwiches",
         "Nobodies",
+        "Selmas",
+        "Alcoholics",
         "Dragons"
     ]
 
