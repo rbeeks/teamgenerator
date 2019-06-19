@@ -12,7 +12,7 @@ def generate_team_name():
         "Burbling",
         "Confident",
         "Zimbabwean",
-        "Ingolrious",
+        "Inglorious",
         "Ravishing",
         "Indubious",
         "Dubious",
@@ -96,7 +96,8 @@ def generate_team_name():
         "Cheese Sandwiches",
         "Nobodies",
         "Alcoholics",
-        "Dragons"
+        "Dragons",
+        "Basterds"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
