@@ -48,6 +48,7 @@ def generate_team_name():
         "Heartless",
         "Alcoholic",
         "Hungover",
+        "Kentucky Fried",
         "Blue-Eyes White",
         "Red-Eyes Black"
     ]
@@ -96,6 +97,7 @@ def generate_team_name():
         "Cheese Sandwiches",
         "Nobodies",
         "Alcoholics",
+        "Chickens",
         "Dragons",
         "Basterds"
     ]
