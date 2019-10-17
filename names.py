@@ -99,7 +99,8 @@ def generate_team_name():
         "Alcoholics",
         "Chickens",
         "Dragons",
-        "Basterds"
+        "Bastards",
+        "Nincompoops"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
