@@ -50,7 +50,8 @@ def generate_team_name():
         "Hungover",
         "Kentucky Fried",
         "Blue-Eyes White",
-        "Red-Eyes Black"
+        "Red-Eyes Black",
+        "Committed and Pashuned"
     ]
 
     nouns = [
