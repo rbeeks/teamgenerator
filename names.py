@@ -52,7 +52,8 @@ def generate_team_name():
         "Blue-Eyes White",
         "Red-Eyes Black",
         "Committed and Pashuned",
-        "Rowan-faced"
+        "Rowan-faced",
+        "Pun-tastic"
     ]
 
     nouns = [
@@ -102,7 +103,8 @@ def generate_team_name():
         "Chickens",
         "Dragons",
         "Bastards",
-        "Nincompoops"
+        "Nincompoops",
+        "Harriotts"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
