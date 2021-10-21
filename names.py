@@ -62,7 +62,7 @@ def generate_team_name():
         "Bears",
         "Pelicans",
         "CuntSmashers",
-        "FixEngines",
+        "FIX Engines",
         "Tigers",
         "Bananas",
         "Capybaras",
@@ -104,7 +104,8 @@ def generate_team_name():
         "Dragons",
         "Bastards",
         "Nincompoops",
-        "Harriotts"
+        "Harriotts",
+        "Ronaldos"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
