@@ -53,7 +53,8 @@ def generate_team_name():
         "Red-Eyes Black",
         "Committed and Pashuned",
         "Rowan-faced",
-        "Pun-tastic"
+        "Pun-tastic",
+        "Homeless"
     ]
 
     nouns = [
