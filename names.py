@@ -54,7 +54,8 @@ def generate_team_name():
         "Committed and Pashuned",
         "Rowan-faced",
         "Pun-tastic",
-        "Homeless"
+        "Homeless",
+        "Cautiously Evasive"
     ]
 
     nouns = [
