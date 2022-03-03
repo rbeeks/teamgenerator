@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import sys
 import csv
 from random import shuffle
@@ -39,8 +39,8 @@ def arrange_teams(players):
     
 
     # Try to get the teams as even as possible
-    for max_skill_gap in xrange(1,1000,5):
-        for i in xrange(2000):
+    for max_skill_gap in range(1,1000,5):
+        for i in range(2000):
             # Assign teams
             shuffle(players)
             for player in players:
@@ -72,7 +72,7 @@ players = read_players()
 
 [team1, team2] = arrange_teams(players)
 
-print "HOME TEAM"
-print team1
-print "AWAY TEAM (BIBS)"
-print team2
+print("HOME TEAM")
+print(team1)
+print("AWAY TEAM (BIBS)")
+print(team2)
