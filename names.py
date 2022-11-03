@@ -109,7 +109,8 @@ def generate_team_name():
         "Nincompoops",
         "Harriotts",
         "Ronaldos",
-        "Walids"
+        "Walids",
+        "LEAN HOGS"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
