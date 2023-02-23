@@ -63,6 +63,7 @@ def generate_team_name():
         "Cats",
         "Dogs",
         "Bears",
+        "Motsons",
         "Pelicans",
         "CuntSmashers",
         "FIX Engines",
