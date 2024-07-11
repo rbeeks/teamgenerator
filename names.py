@@ -56,7 +56,8 @@ def generate_team_name():
         "Pun-tastic",
         "Homeless",
         "Cautiously Evasive",
-        "Nike-Worshipping"
+        "Nike-Worshipping",
+        "Mysterious"
     ]
 
     nouns = [
@@ -112,7 +113,8 @@ def generate_team_name():
         "Ronaldos",
         "Walids",
         "LEAN HOGS",
-        "Pastor Freds"
+        "Pastor Freds",
+        "Wangs"
     ]
 
     return "The " + random.choice(adjectives) + " " + random.choice(nouns)
