@@ -57,7 +57,8 @@ def generate_team_name():
         "Homeless",
         "Cautiously Evasive",
         "Nike-Worshipping",
-        "Mysterious"
+        "Mysterious",
+        "Baby Brain"
     ]
 
     nouns = [
